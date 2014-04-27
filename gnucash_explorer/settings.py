@@ -80,3 +80,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from gnucash_explorer.local_settings import *
+except ImportError as e:
+    print('You should set up your local_settings.py')
