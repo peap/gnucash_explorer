@@ -13,7 +13,7 @@ class Account(models.Model):
     parent_guid = models.ForeignKey('self', null=True)
 
     account_type = models.CharField(max_length=2048)
-    commodity_guid = models.CharField(max_length=32, null=True)
+    commodity_guid = models.CharField(max_length=32, null=True)  # ForeignKey...
     commodity_scu = models.IntegerField()
     non_std_scu = models.IntegerField()
 
